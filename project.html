@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem("theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("darkmode");
+            }
+        })();
+    </script>
     <title>My Projects</title>
 </head>
 <body>
@@ -17,11 +25,19 @@
         </ul>
     </nav>
 
-    <h1 class = "center">My Personal Projects</h1>
+    <div class="content">
+        <h1 class="center">Personal Projects</h1>
+    </div>
 
     <p class = "flex-container">
 
     </p>
+
+    <script src="needs.js"></script>
+    <button id="darkmode-toggle" onclick="darkmode()">
+        <span id="mode-icon">🌞</span>
+    </button>
+    
 
 </body>
 </html>

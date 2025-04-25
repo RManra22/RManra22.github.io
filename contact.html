@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem("theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("darkmode");
+            }
+        })();
+    </script>
     <title>Contact Page</title>
 </head>
 <body class="banner">
@@ -27,6 +35,12 @@
         <!-- Optional: Replace this section with more actual content later -->
         <section style="height: 2000px;"></section>
     </div>
+
+    <script src="needs.js"></script>
+    <button id="darkmode-toggle" onclick="darkmode()">
+        <span id="mode-icon">🌞</span>
+    </button>
+    
 
 </body>
 </html>
