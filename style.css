@@ -121,16 +121,6 @@ html.darkmode, body.darkmode {
     transform: scale(1.1);
 }
 
-/* Hide menu button on desktop */
-#menu-btn {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
 /* Fly-in side menu for mobile */
 .side-menu {
     position: fixed;
@@ -204,4 +194,33 @@ html.darkmode, body.darkmode {
         width: 250px;
         height: 250px;
     }
+}
+
+/* Side menu close button */
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hamburger button styling (blue like navbar) */
+#menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    font-size: 24px;
+    background-color: rgb(23, 66, 255);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
