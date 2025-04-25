@@ -121,106 +121,54 @@ html.darkmode, body.darkmode {
     transform: scale(1.1);
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-    body {
-        padding-top: 60px;
-    }
-
-    .navbar {
-        padding: 5px 0;
-    }
-    
-    .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .navbar li {
-        margin: 5px 10px;
-    }
-    .content {
-        padding: 1rem;
-        width: 90%;
-    }
-
-    .headshot {
-        width: 250px;
-        height: 250px;
-    }
-
-    iframe {
-        width: 100%;
-        height: auto;
-    }
-
-    #darkmode-toggle {
-        bottom: 15px;
-        left: 15px;
-        padding: 8px;
-        font-size: 20px;
-    }
-}
-
-/* Even smaller screens (phones) */
-@media (max-width: 480px) {
-    .navbar ul {
-        flex-direction: column;
-        font-size: 16px;
-    }
-
-    .content {
-        padding: 0.5rem;
-        width: 95%;
-    }
-
-    h1, h3, p {
-        font-size: 18px;
-    }
-}
-
-.menu-toggle {
+/* Hide menu button on desktop */
+#menu-btn {
     display: none;
     font-size: 28px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
-    margin-left: 20px;
 }
 
-/* Hamburger menu for mobile */
+/* Fly-in side menu for mobile */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: rgb(23, 66, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+/* Show hamburger + hide full navbar on small screens */
 @media (max-width: 768px) {
-    .menu-toggle {
+    #menu-btn {
         display: block;
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: 20px;
+        right: 20px;
         z-index: 1001;
     }
 
     .nav-links {
         display: none;
-        flex-direction: column;
-        background-color: rgb(23, 66, 255);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        z-index: 1000;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
     }
 }
-
-
-

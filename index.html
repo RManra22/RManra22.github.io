@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +18,7 @@
 <body class="banner">
 
     <nav class="navbar">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button id="menu-btn" onclick="toggleMenu()">☰</button>
         <ul id="nav-links" class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -31,9 +30,7 @@
 
     <div class="content">
         <h1 class="center">Roberto Manra</h1>
-
         <img class="headshot" src="headshot.png" alt="Professional headshot" style="width: 450px; height: 450px;">
-
         <h3 class="center">Ready to learn!</h3>
         <p class="center" style="font-size: large;">
             Hello, I am a first generation Mexican-American Computer Sciences student at CSUF.
@@ -51,6 +48,14 @@
     <button id="darkmode-toggle" onclick="darkmode()">
         <span id="mode-icon">🌞</span>
     </button>
-    
+
+    <div id="side-menu" class="side-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
 </body>
 </html>

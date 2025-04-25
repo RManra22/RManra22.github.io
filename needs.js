@@ -25,8 +25,7 @@ window.onload = function () {
     }
 };
 
-
 function toggleMenu() {
-    const links = document.getElementById("nav-links");
-    links.classList.toggle("open");
+    const menu = document.getElementById("side-menu");
+    menu.classList.toggle("open");
 }
