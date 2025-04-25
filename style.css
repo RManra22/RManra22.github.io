@@ -174,12 +174,34 @@ html.darkmode, body.darkmode {
         overflow: hidden;
     }
 
-    /* Show the menu button */
     #menu-btn {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 20px;
         z-index: 1001;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Default desktop size */
+.headshot {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 450px;
+    height: 450px;
+}
+
+/* Mobile size */
+@media (max-width: 768px) {
+    .headshot {
+        width: 250px;
+        height: 250px;
     }
 }
