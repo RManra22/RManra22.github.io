@@ -160,15 +160,26 @@ html.darkmode, body.darkmode {
 
 /* Show hamburger + hide full navbar on small screens */
 @media (max-width: 768px) {
+    /* Hide normal nav links */
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Make the navbar invisible (we keep it for structure, but hide its presence) */
+    .navbar {
+        background-color: transparent;
+        box-shadow: none;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    /* Show the menu button */
     #menu-btn {
         display: block;
         position: absolute;
         top: 20px;
         right: 20px;
         z-index: 1001;
-    }
-
-    .nav-links {
-        display: none;
     }
 }
