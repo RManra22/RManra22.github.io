@@ -73,11 +73,16 @@ html.darkmode, body.darkmode {
 .content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 120px 20px 40px 20px; /* <-- 120px TOP padding, 40px bottom */
+    padding: 50px 20px 40px 20px;
     border-radius: 12px;
     background-color: white;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Normalize paragraph spacing inside .content */
+.content p {
+    margin-top: 0;
 }
 
 .center {
