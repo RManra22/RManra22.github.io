@@ -3,6 +3,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+h1, h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 html, body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -68,7 +73,7 @@ html.darkmode, body.darkmode {
 .content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 120px 20px 40px 20px; /* <-- 120px TOP padding, 40px bottom */
     border-radius: 12px;
     background-color: white;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -191,7 +196,7 @@ html.darkmode, body.darkmode {
     }
 
     .resume-wrapper iframe {
-        height: 80vh;
+        height: 400px;
     }
 }
 
@@ -200,12 +205,41 @@ html.darkmode, body.darkmode {
     max-width: 900px;
     margin: 0 auto;
     padding: 1rem;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
 }
 
 .resume-wrapper iframe {
     width: 100%;
-    height: 100vh;
+    max-width: 100%;
+    height: 1150px; /* Shorter than full screen */
     border: 1px solid #ccc;
+    display: block;
+    box-sizing: border-box;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 4rem; 
+    flex-wrap: wrap;
+}
+
+.project-image {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.03);
+}
+
+.project-info {
+    max-width: 500px;
 }
