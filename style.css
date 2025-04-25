@@ -1,3 +1,4 @@
+/* Base font */
 * {
     font-family: 'Inter', sans-serif;
 }
@@ -10,9 +11,9 @@ body {
     margin: 0;
     padding-top: 70px;
     background-color: white;
-    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Dark mode settings */
 .darkmode html,
 .darkmode body {
     background-color: rgb(26, 25, 25);
@@ -27,7 +28,8 @@ html.darkmode, body.darkmode {
 .darkmode .content {
     background-color: #1e1e1e;
 }
-/* Navbar stays at top */
+
+/* Navbar desktop */
 .navbar {
     position: fixed;
     top: 0;
@@ -36,7 +38,6 @@ html.darkmode, body.darkmode {
     z-index: 999;
 }
 
-/* Centered navbar links */
 .navbar ul {
     display: flex;
     justify-content: center;
@@ -45,12 +46,10 @@ html.darkmode, body.darkmode {
     margin: 0;
 }
 
-/* Each list item gets spacing */
 .navbar li {
     margin: 0 20px;
 }
 
-/* Navbar links */
 .navbar a {
     color: white;
     text-decoration: none;
@@ -59,26 +58,13 @@ html.darkmode, body.darkmode {
     border-radius: 8px;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 .navbar a:hover {
     background-color: rgb(50, 87, 255);
     transform: scale(1.1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Center utility class */
-.center {
-    text-align: center;
-}
-
-/* Headshot styling */
-.headshot {
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Optional: wrap content */
+/* Content */
 .content {
     max-width: 900px;
     margin: 0 auto;
@@ -89,18 +75,21 @@ html.darkmode, body.darkmode {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Fly-in-from-top animation */
-@keyframes flyInTop {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.center {
+    text-align: center;
 }
 
+/* Headshot image */
+.headshot {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 450px;
+    height: 450px;
+}
+
+/* Dark mode toggle button */
 #darkmode-toggle {
     position: fixed;
     bottom: 20px;
@@ -121,7 +110,7 @@ html.darkmode, body.darkmode {
     transform: scale(1.1);
 }
 
-/* Fly-in side menu for mobile */
+/* Side menu */
 .side-menu {
     position: fixed;
     top: 0;
@@ -131,10 +120,14 @@ html.darkmode, body.darkmode {
     background-color: rgb(23, 66, 255);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 60px;
     transition: right 0.3s ease;
     z-index: 999;
+}
+
+.side-menu.open {
+    right: 0;
 }
 
 .side-menu a {
@@ -144,59 +137,7 @@ html.darkmode, body.darkmode {
     padding: 10px;
 }
 
-.side-menu.open {
-    right: 0;
-}
-
-/* Show hamburger + hide full navbar on small screens */
-@media (max-width: 768px) {
-    /* Hide normal nav links */
-    .nav-links {
-        display: none !important;
-    }
-
-    /* Make the navbar invisible (we keep it for structure, but hide its presence) */
-    .navbar {
-        background-color: transparent;
-        box-shadow: none;
-        height: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    #menu-btn {
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1001;
-        font-size: 28px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-}
-
-/* Default desktop size */
-.headshot {
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-    object-fit: cover;
-    width: 450px;
-    height: 450px;
-}
-
-/* Mobile size */
-@media (max-width: 768px) {
-    .headshot {
-        width: 250px;
-        height: 250px;
-    }
-}
-
-/* Side menu close button */
+/* Close button inside side menu */
 #close-btn {
     position: absolute;
     top: 10px;
@@ -209,7 +150,7 @@ html.darkmode, body.darkmode {
     z-index: 1002;
 }
 
-/* Hamburger button styling (blue like navbar) */
+/* Hamburger menu button */
 #menu-btn {
     display: none;
     position: fixed;
@@ -224,4 +165,47 @@ html.darkmode, body.darkmode {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+
+    .navbar {
+        background-color: transparent;
+        box-shadow: none;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .headshot {
+        width: 250px;
+        height: 250px;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    .resume-wrapper iframe {
+        height: 80vh;
+    }
+}
+
+.resume-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-wrapper iframe {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #ccc;
 }
