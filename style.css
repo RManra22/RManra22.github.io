@@ -248,3 +248,51 @@ html.darkmode, body.darkmode {
 .project-info {
     max-width: 500px;
 }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* <-- Bigger spacing between inputs */
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px;
+    border: none;
+    background-color: rgb(23, 66, 255);
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: rgb(50, 87, 255);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
