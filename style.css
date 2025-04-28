@@ -203,6 +203,16 @@ html.darkmode, body.darkmode {
     .resume-wrapper iframe {
         height: 400px;
     }
+
+    .project-info {
+        max-width: 90%;
+    }
+
+    .project-image {
+        width: 90%;
+        max-width: 300px; /* <<< cap it! */
+        height: auto;
+    }
 }
 
 .resume-wrapper {
@@ -226,15 +236,15 @@ html.darkmode, body.darkmode {
 
 .project {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    text-align: center;
     gap: 20px;
-    margin-bottom: 4rem; 
-    flex-wrap: wrap;
+    margin-bottom: 3rem;
 }
 
 .project-image {
-    width: 300px;
+    width: 550px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -295,4 +305,24 @@ html.darkmode, body.darkmode {
 
 .social-icon:hover {
     transform: scale(1.1);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.gallery-image {
+    width: 400px; /* Bigger */
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
 }

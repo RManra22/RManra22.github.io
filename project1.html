@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>
         (function() {
@@ -15,7 +16,6 @@
     <title>Home Page</title>
 </head>
 <body class="banner">
-
     <nav class="navbar">
         <button id="menu-btn" onclick="toggleMenu()">☰</button>
         <ul id="nav-links" class="nav-links">
@@ -27,21 +27,23 @@
         </ul>
     </nav>
 
-    <div class="content">
-        <h1 class="center">Roberto Manra</h1>
-        <img class="headshot" src="thingsneeded/project1.png" alt="Professional headshot">
-        <h3 class="center">Ready to learn!</h3>
-        <p class="center" style="font-size: large;">
-            Hello, I am a first generation Mexican-American Computer Sciences student at CSUF.
-            Currently I am in my Junior year in the program but I consider my self a freshman 
-            since this is my first year at CSUF. I transfered from Santa Ana College to CSUF 
-            in the Fall of 2025. I graduated from Santa Ana College with my Associate of Science 
-            in Computer Science and I plan to obtain my Bachelors degree in Computer Science.
-            I plan to achieve this in the Spring of 2026 but that could change. After college 
-            I hope to obtain a job in the tech field either as a software engineer or with a 
-            position in IT. I hope this website helps you get to know me a little bit better! 
-        </p>
+    <h1 class="center">Periodic Table of Elements</h1>
+    
+    <div class="gallery">
+        <a href="thingsneeded/project1/mainmenu.png">
+            <img src="thingsneeded/project1/mainmenu.png" alt="Screenshot 1" class="gallery-image">
+        </a>
+        <a href="thingsneeded/project1/table.png">
+            <img src="thingsneeded/project1/table.png" alt="Screenshot 2" class="gallery-image">
+        </a>
+        <a href="thingsneeded/project1/search.png">
+            <img src="thingsneeded/project1/search.png" alt="Screenshot 3" class="gallery-image">
+        </a>
     </div>
+    
+    <p class="center" style="font-size: large;">
+        Description about the project...
+    </p>
 
     <script src="needs.js"></script>
     <button id="darkmode-toggle" onclick="darkmode()">
@@ -57,5 +59,15 @@
         <a href="contact.html">Contact Me</a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.jquery.min.js"></script>
+    <script>
+    new SimpleLightbox('.gallery a', {});
+    </script>
+
+    <div class="social-links">
+        <a href="https://github.com/iwant22/Periodic-Table-of-Elements" target="_blank">
+            <img src="thingsneeded/GitHub-Mark.png" alt="Github Logo" class="social-icon">
+        </a>
+    </div>
 </body>
 </html>
