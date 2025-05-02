@@ -395,3 +395,8 @@ body.darkmode {
     margin-bottom: 10px;
     font-size: 18px;
 }
+
+.project2-img {
+    width: 250px;
+    max-width: 80%;
+}
