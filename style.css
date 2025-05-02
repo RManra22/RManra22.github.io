@@ -3,12 +3,14 @@
     font-family: 'Inter', sans-serif;
 }
 
-h1, h3 {
+h1,
+h3 {
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-html, body {
+html,
+body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -25,7 +27,8 @@ body {
     color: white;
 }
 
-html.darkmode, body.darkmode {
+html.darkmode,
+body.darkmode {
     background-color: rgb(26, 25, 25);
     color: white;
 }
@@ -210,8 +213,45 @@ html.darkmode, body.darkmode {
 
     .project-image {
         width: 90%;
-        max-width: 300px; /* <<< cap it! */
+        max-width: 300px;
+        /* <<< cap it! */
         height: auto;
+    }
+
+    .skills-section {
+        padding: 0 1rem;
+    }
+
+    .skills-section li {
+        font-size: 16px;
+    }
+
+    .gallery-image {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-icon {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -228,7 +268,8 @@ html.darkmode, body.darkmode {
 .resume-wrapper iframe {
     width: 100%;
     max-width: 100%;
-    height: 1150px; /* Shorter than full screen */
+    height: 1150px;
+    /* Shorter than full screen */
     border: 1px solid #ccc;
     display: block;
     box-sizing: border-box;
@@ -262,7 +303,8 @@ html.darkmode, body.darkmode {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 25px; /* <-- Bigger spacing between inputs */
+    gap: 25px;
+    /* <-- Bigger spacing between inputs */
     max-width: 500px;
     margin: 0 auto 3rem auto;
 }
@@ -316,13 +358,40 @@ html.darkmode, body.darkmode {
 }
 
 .gallery-image {
-    width: 400px; /* Bigger */
+    width: 400px;
     max-width: 90%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+    /* Forces block layout inside <a> */
+    margin: 0 auto;
+    /* ✅ Centers the image horizontally */
     transition: transform 0.2s ease;
 }
+
 .gallery-image:hover {
     transform: scale(1.05);
+}
+
+.skills-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-section h3 {
+    margin-top: 2rem;
+    color: #1737ff;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.skills-section li {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
