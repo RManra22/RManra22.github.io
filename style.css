@@ -90,6 +90,9 @@ body.darkmode {
 
 .center {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 /* Headshot image */
@@ -214,7 +217,6 @@ body.darkmode {
     .project-image {
         width: 90%;
         max-width: 300px;
-        /* <<< cap it! */
         height: auto;
     }
 
@@ -382,7 +384,7 @@ body.darkmode {
 
 .skills-section h3 {
     margin-top: 2rem;
-    color: #1737ff;
+    color: rgb(23, 66, 255);
 }
 
 .skills-section ul {
@@ -399,4 +401,20 @@ body.darkmode {
 .project2-img {
     width: 250px;
     max-width: 80%;
+}
+
+@keyframes flyIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fly-in {
+    animation: flyIn 0.8s ease-out forwards;
+    will-change: transform;
 }
